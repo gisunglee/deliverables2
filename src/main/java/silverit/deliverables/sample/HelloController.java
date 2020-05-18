@@ -21,9 +21,10 @@ public class HelloController {
 
         //given
         Member member = new Member();
-        member.setUsername("memberA");
+        member.setUsername("memberb");
 
-        memberRepository.save(member);
+        Member memberSaved = memberRepository.save(member);
+
         memberRepository.flush();
 
         Optional<Member> member1 = memberRepository.findById(Long.valueOf(1));
@@ -33,8 +34,9 @@ public class HelloController {
 
         memberRepository.flush();
         //when
-//        Long savedId = memberRepository.save(member);
-//        Member findMember = memberRepository.find(savedId);
+
+        Optional<Member> memb1er1 = memberRepository.findById(memberSaved.getId());
+
 
         //then
 //        Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
