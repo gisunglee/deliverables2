@@ -16,4 +16,6 @@ public class Member {
 
     private String username;
 
+    private String age;
+
 }
